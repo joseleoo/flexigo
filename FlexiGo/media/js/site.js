@@ -2,6 +2,7 @@
 
 
 $(function () {
+   
     jQuery.validator.setDefaults({
        
         success: "valid",
@@ -43,6 +44,8 @@ $(function () {
 
 
     })
+
+
 
 });
 
