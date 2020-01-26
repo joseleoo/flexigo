@@ -1,0 +1,13 @@
+.error {
+    font-style: italic;
+    color: saddlebrown;
+    border-radius: .25rem !important;
+        border:saddlebrown !important   
+}
+.valid {
+    border-radius: .25rem !important;
+}
+.input-group-text {
+    background-color: #d6d8d9;
+    color: darkslategrey
+}
