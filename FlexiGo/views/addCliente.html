@@ -1,27 +1,33 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<!doctype html>
+<html>
 <head>
+    <meta charset="utf-8">
+    <title>Nuevo Cliente</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>|
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
     <script src="../media/js/site.js"></script>
-    <meta charset="UTF-8">
-    <title>Nuevo Cliente</title>
+
 </head>
 <body>
 
-    <h1 class="display-2 text-center">Nuevo Cliente</h1>
 
-    <form id="frmCliente">
+
+    <form id="formClient" method="post">
+
+
 
         <div class="container">
+            <div class="jumbotron">
+
+                <h1 class="display-2 text-center">Nuevo Cliente</h1>
             <div class="alert alert-success" style="display:none" role="alert">
                 ¡Guardado exitosamente!
             </div>
@@ -32,10 +38,10 @@
                 <div class="col input-group mb-3">
 
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelIdcliente">Identificación del Cliente *</span>
+                        <span class="input-group-text" id="labelIdcliente">Id del Cliente *</span>
                     </div>
 
-                    <input type="text" class="form-control" id="idcliente" placeholder="Escriba aquí el Id de cliente"
+                    <input type="text"  class="form-control left" id="idClient" name="idClient" placeholder="Escriba aquí el Id de cliente"
                            aria-label="Default" aria-describedby="labelIdcliente" required>
 
                 </div>
@@ -43,7 +49,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroup-sizing-default">NIF *</span>
                     </div>
-                    <input type="number" class="form-control" id="nif" placeholder="Escriba NIF mínimo de 8 dígitos" required>
+                    <input type="number" class="form-control" id="nif" name="nif" placeholder="Escriba NIF mínimo de 8 dígitos" required>
 
                 </div>
             </div>
@@ -53,22 +59,22 @@
                         <span class="input-group-text" id="labelncomercial">Nombre Comercial *</span>
 
                     </div>
-                    <input type="text" class="form-control" id="labelncomercial" placeholder="Escriba aquí el nombre comercial" required>
+                    <input type="text" class="form-control" id="ncomercial" placeholder="Escriba aquí el nombre comercial" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Razón social *</span>
+                        <span class="input-group-text" id="labelrsocial">Razón social *</span>
 
                     </div>
-                    <input type="text" class="form-control" id="rsocial" placeholder="Escriba aquí la razón social" required>
+                    <input type="text" class="form-control" id="rsocial" name="rsocial" placeholder="Escriba aquí la razón social" required>
                 </div>
             </div>
             <div class="row">
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Dirección</span>
+                        <span class="input-group-text" id="labelDir">Dirección</span>
 
                     </div>
                     <textarea id="direccion" class="form-control" aria-label="With textarea"
@@ -79,7 +85,7 @@
             <div class="row">
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Población</span>
+                        <span class="input-group-text" id="labelPoblacion">Población</span>
 
                     </div>
 
@@ -97,7 +103,7 @@
             <div class="row">
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Código Postal</span>
+                        <span class="input-group-text" id="labelcpostal">Provincia</span>
                     </div>
 
                     <input type="text" class="form-control" id="provincia" placeholder="Escriba aquí la provincia">
@@ -105,7 +111,7 @@
                 </div>
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">País</span>
+                        <span class="input-group-text" id="labelpais">País</span>
                     </div>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <option>Seleccione</option>
@@ -119,7 +125,7 @@
             <div class="row">
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Email</span>
+                        <span class="input-group-text" id="labelemail">Email</span>
                     </div>
 
                     <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
@@ -127,7 +133,7 @@
                 </div>
                 <div class="col input-group mb-3">
                     <div class="input-group-prepend">
-                        <span class="input-group-text" id="labelncomercial">Teléfono</span>
+                        <span class="input-group-text" id="labeltelefono">Teléfono</span>
                     </div>
                     <input type="text" class="form-control" id="telefono" placeholder="Teléfono">
                 </div>
@@ -135,7 +141,7 @@
             <div class="row">
                 <div class="col">
                     <br>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="submit" id="save" class="btn btn-primary">Enviar</button>
 
                 </div>
                 <div class="col">
@@ -144,14 +150,13 @@
                 </div>
             </div>
         </div>
-
+        </div>
 
     </form>
 </body>
 </html>
 <script>
 
-    var validator = $("#frmCliente").validate();
-    $(#idcliente).messages.required = 'jajaja';
-    $(#nif).messages.required = 'jojoj';
+
+
 </script>
