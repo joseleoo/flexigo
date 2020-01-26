@@ -1,13 +1,13 @@
 
-import { MDCTextField } from '@material/textfield';
 
-const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
+
 $(function () {
     jQuery.validator.setDefaults({
        
         success: "valid",
         submitHandler: function () {
-				alert( "submitted!" );
+            $("#saveSucces").show(200);
+            $("#saveSucces").hide(4000);
 			}
     });
     $("#save").on("click", function () {

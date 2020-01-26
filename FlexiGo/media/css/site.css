@@ -2,12 +2,19 @@
     font-style: italic;
     color: saddlebrown;
     border-radius: .25rem !important;
-        border:saddlebrown !important   
+    border: 1px solid saddlebrown !important;
+}
+label.error {
+    border: none !important;
 }
 .valid {
     border-radius: .25rem !important;
 }
+
 .input-group-text {
-    background-color: #d6d8d9;
-    color: darkslategrey
+    /*background-color: #d6d8d9;
+    color: darkslategrey;*/
+
 }
+
+
