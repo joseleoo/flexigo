@@ -5,8 +5,11 @@ $(function () {
    
     jQuery.validator.setDefaults({
        
-        success: "valid"
-
+        success: "valid",
+        submitHandler: function () {
+            $("#saveSucces").show();
+            $("#saveSucces").fadeOut(2000);
+        }
     });
     $("#save").on("click", function () {
 

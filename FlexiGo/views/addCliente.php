@@ -35,8 +35,9 @@
         </ul>
     </nav>
 
-    <form id="formClient" name="formClient" action="../app/models/Client.php" method="post">
-
+<!--
+  <form id="formClient" name="formClient" action="../app/models/Client.php" method="post">-->
+        <form id="formClient" name="formClient" action="" method="post">
         <div class="container">
 
             <div id="jumppal">
