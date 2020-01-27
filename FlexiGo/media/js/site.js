@@ -13,7 +13,7 @@ $(function () {
     });
     $("#save").on("click", function () {
 
-        $.validator.messages.required = 'Por favor llena este campo';
+        $.validator.messages.required = ' ';
         $.validator.messages.email = 'Por favor corrige el formato del email';
         jQuery.validator.addMethod("last", function (value, element) {
             return this.optional(element) || /^[0-9]+[^I]\s?[a-z|A-Z|]{1}$/.test(value);
@@ -45,7 +45,7 @@ $(function () {
 
     })
 
-
+    $('[data-toggle="tooltip"]').tooltip();  
 
 });
 
