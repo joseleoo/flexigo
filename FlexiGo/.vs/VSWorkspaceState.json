@@ -1,11 +1,15 @@
 {
   "ExpandedNodes": [
     "",
+    "\\app",
+    "\\app\\models",
     "\\media",
     "\\media\\css",
+    "\\media\\images",
+    "\\media\\images\\1x",
     "\\media\\js",
     "\\views"
   ],
-  "SelectedNode": "\\media\\css\\site.css",
+  "SelectedNode": "\\views\\addCliente.php",
   "PreviewInSolutionExplorer": false
 }
