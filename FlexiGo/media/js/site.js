@@ -5,11 +5,8 @@ $(function () {
    
     jQuery.validator.setDefaults({
        
-        success: "valid",
-        submitHandler: function () {
-            $("#saveSucces").show(200);
-            $("#saveSucces").hide(4000);
-			}
+        success: "valid"
+
     });
     $("#save").on("click", function () {
 
@@ -21,28 +18,20 @@ $(function () {
 
         $("#formClient").validate(
             {
-
                 rules: {
-
                     nif: {
                         required: true,
                         minlength: 9,
                         last: true,
                     },
-
                 },
                 messages: {
                     nif: {
                         minlength: jQuery.validator.format("Escriba por lo menos 9 caracteres!")
                     },
                 },
-               
-
-
             }
         )
-
-
     })
 
     $('[data-toggle="tooltip"]').tooltip();  

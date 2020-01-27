@@ -16,7 +16,9 @@ label.error {
     padding-left: 16px;
     margin-left: .3em
 }
-
+.valid {
+    border-radius: .25rem !important;
+}
 label.valid {
     border-radius: .25rem !important;
     background: url("../images/1x/correct.png") no-repeat !important;
