@@ -7,4 +7,4 @@ En la carpeta FlexiGo/app/sql/createClient.sql se encuentra la query solicitada 
 
 En este link lo pueden ver el desarrollo en vivo en HTML sin PHP https://joseleoo.github.io/flexigo/FlexiGo/views/addClient.html
 
-Espero les guste
+Espero les guste.
