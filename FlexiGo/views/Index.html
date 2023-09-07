@@ -22,10 +22,14 @@
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
-    <nav id="navbar" class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <a id="navbar" class="navbar-brand" href="#">Mapa de la página</a>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Mapa de la página</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="nav nav-pills">
-            <li class="nav-item ">
+            <li class="nav-item">
                 <a class="nav-link" href="#newClient">Registrar nuevo cliente</a>
             </li>
             <li class="nav-item">
@@ -44,7 +48,9 @@
                 <a class="nav-link" href="#location">Tu ubicación</a>
             </li>
         </ul>
-    </nav>
+    </div>
+</nav>
+
 
 <!--
   <form id="formClient" name="formClient" action="../app/models/Client.php" method="post">-->
