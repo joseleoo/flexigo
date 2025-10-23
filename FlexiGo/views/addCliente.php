@@ -225,8 +225,12 @@
                                 infoWindow.open(map);
                             }
                         </script>
+                        <?php
+                        $config = require_once('../app/config/maps_config.php');
+                        $api_key = $config['api_key'];
+                        ?>
                         <script async defer
-                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4KOHl_2QoZfdXRAQ2jiAsMC1WJ-joBdg&callback=initMap">
+                                src="https://maps.googleapis.com/maps/api/js?key=<?php echo htmlspecialchars($api_key); ?>&callback=initMap">
                         </script>
 
                     </li>
