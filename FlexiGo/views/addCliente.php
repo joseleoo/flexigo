@@ -225,7 +225,8 @@
                                 infoWindow.open(map);
                             }
                         </script>
-                        <?php
+
++<?php
                         $config = require_once('../app/config/maps_config.php');
                         $api_key = $config['api_key'];
                         ?>
